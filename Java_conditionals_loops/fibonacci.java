@@ -20,8 +20,9 @@ public class fibonacci {
                                // (1)
                     a = temp; // in this we are increasing the value of a(0) before to (1) now
                     count++; // as we increase the count we can form the Nth value of fibonacci series.
+                    System.out.print(" "+b);
                 }
-                System.out.print(b);
+                // System.out.print(b);
             }
         }
     }
