@@ -13,6 +13,7 @@ public class prob1 {
 
         // Taking inputs
         for(int i=0; i<size; i++) {
+            System.out.print("Number " +(i+1)+ ": ");
             number[i] = sc.nextInt();
         }
 
@@ -22,7 +23,7 @@ public class prob1 {
         // Output 
         for(int i=0; i<size; i++){
             if (number[i] == x){
-                System.out.println(i);
+                System.out.println("The index value at which the number is at: " +i);
             }
         }
         sc.close();
