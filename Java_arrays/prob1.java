@@ -1,6 +1,6 @@
 // Take an array as input from user. Search for given number X and print the index at which it occurs.
 
-package Java_arrays;
+package java_arrays;
 
 import java.util.Scanner;
 public class prob1 {
