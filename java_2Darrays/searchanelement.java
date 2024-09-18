@@ -18,7 +18,6 @@ public class searchanelement {
         // Taking Input
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-
                 System.out.print("Enter the (" + (i + 1) + (j + 1) + ")th element: ");
                 matrix[i][j] = sc.nextInt();
             }
