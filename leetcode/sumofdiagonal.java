@@ -1,6 +1,6 @@
 // Find the sum of the diagonal elements of a square 2D array.
 
-package java_2Darrays;
+package leetcode;
 
 import java.util.Scanner;
 
