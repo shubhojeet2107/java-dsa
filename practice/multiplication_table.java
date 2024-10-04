@@ -10,7 +10,7 @@ public class multiplication_table {
 
         System.out.print("Enter the Number: ");
         int num = reads.nextInt();
-        int multiplication = num;
+        int multiplication = 0;
 
         for (int i=1; i<=10; i++) {
             multiplication = (num*i); 

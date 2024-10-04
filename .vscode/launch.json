@@ -1,0 +1,392 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "average",
+            "request": "launch",
+            "mainClass": "average",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "checkeven",
+            "request": "launch",
+            "mainClass": "checkeven",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "factorial",
+            "request": "launch",
+            "mainClass": "factorial",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "factors",
+            "request": "launch",
+            "mainClass": "factors",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "fibonacci",
+            "request": "launch",
+            "mainClass": "fibonacci",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "greaterthan",
+            "request": "launch",
+            "mainClass": "greaterthan",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "checkforsymmetric",
+            "request": "launch",
+            "mainClass": "java_2Darrays.checkforsymmetric",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "matrix",
+            "request": "launch",
+            "mainClass": "java_2Darrays.matrix",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "maxmin",
+            "request": "launch",
+            "mainClass": "java_2Darrays.maxmin",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "multiplicationof2matrix",
+            "request": "launch",
+            "mainClass": "java_2Darrays.multiplicationof2matrix",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "searchanelement",
+            "request": "launch",
+            "mainClass": "java_2Darrays.searchanelement",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "sumofele",
+            "request": "launch",
+            "mainClass": "java_2Darrays.sumofele",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "sumofrowcol",
+            "request": "launch",
+            "mainClass": "java_2Darrays.sumofrowcol",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "transpose",
+            "request": "launch",
+            "mainClass": "java_2Darrays.transpose",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "checkifsorted",
+            "request": "launch",
+            "mainClass": "java_arrays.checkifsorted",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "findmax",
+            "request": "launch",
+            "mainClass": "java_arrays.findmax",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "printnumbers",
+            "request": "launch",
+            "mainClass": "java_arrays.printnumbers",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "prob1",
+            "request": "launch",
+            "mainClass": "java_arrays.prob1",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "prob2",
+            "request": "launch",
+            "mainClass": "java_arrays.prob2",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "prob3",
+            "request": "launch",
+            "mainClass": "java_arrays.prob3",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "reverseelememts",
+            "request": "launch",
+            "mainClass": "java_arrays.reverseelememts",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "sumofelements",
+            "request": "launch",
+            "mainClass": "java_arrays.sumofelements",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "permutation",
+            "request": "launch",
+            "mainClass": "leetcode.arrays.permutation",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "sumofdiagonal",
+            "request": "launch",
+            "mainClass": "leetcode.arrays.sumofdiagonal",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "multiplication_table",
+            "request": "launch",
+            "mainClass": "multiplication_table",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "perfect",
+            "request": "launch",
+            "mainClass": "perfect",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "practice",
+            "request": "launch",
+            "mainClass": "practice",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "calculator",
+            "request": "launch",
+            "mainClass": "practice.calculator",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "countdigits",
+            "request": "launch",
+            "mainClass": "practice.countdigits",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "factorial(1)",
+            "request": "launch",
+            "mainClass": "practice.factorial",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "fibonacci(1)",
+            "request": "launch",
+            "mainClass": "practice.fibonacci",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "menudrivenprog1",
+            "request": "launch",
+            "mainClass": "practice.menudrivenprog1",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "multiplication_table(1)",
+            "request": "launch",
+            "mainClass": "practice.multiplication_table",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "palindrome",
+            "request": "launch",
+            "mainClass": "practice.palindrome",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "pattern1",
+            "request": "launch",
+            "mainClass": "practice.pattern1",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "pattern2",
+            "request": "launch",
+            "mainClass": "practice.pattern2",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "pattern3",
+            "request": "launch",
+            "mainClass": "practice.pattern3",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "pattern4",
+            "request": "launch",
+            "mainClass": "practice.pattern4",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "pattern5",
+            "request": "launch",
+            "mainClass": "practice.pattern5",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "pattern6",
+            "request": "launch",
+            "mainClass": "practice.pattern6",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "primecheck",
+            "request": "launch",
+            "mainClass": "practice.primecheck",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "print_even",
+            "request": "launch",
+            "mainClass": "practice.print_even",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "reverseNum",
+            "request": "launch",
+            "mainClass": "practice.reverseNum",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "sumofnaturalnumbers",
+            "request": "launch",
+            "mainClass": "practice.sumofnaturalnumbers",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "switchstatement",
+            "request": "launch",
+            "mainClass": "practice.switchstatement",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "prime",
+            "request": "launch",
+            "mainClass": "prime",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "radius",
+            "request": "launch",
+            "mainClass": "radius",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "sum_of_N_natural_numbers",
+            "request": "launch",
+            "mainClass": "sum_of_N_natural_numbers",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "sum_of_N_numbers",
+            "request": "launch",
+            "mainClass": "sum_of_N_numbers",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "sum_until_zero",
+            "request": "launch",
+            "mainClass": "sum_until_zero",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "sum_until_zero_fn",
+            "request": "launch",
+            "mainClass": "sum_until_zero_fn",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "sumofodd",
+            "request": "launch",
+            "mainClass": "sumofodd",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "vote",
+            "request": "launch",
+            "mainClass": "vote",
+            "projectName": "java_dsa_c6bb793d"
+        }
+    ]
+}

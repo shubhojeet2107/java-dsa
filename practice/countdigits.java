@@ -8,7 +8,7 @@ public class countdigits {
         Scanner sc = new Scanner(System.in);
         
         System.out.print("Enter the number: ");
-        long num = sc.nextInt();
+        long num = sc.nextLong();
         String str = Long.toString(num);
         int a = 0;
 
