@@ -3,7 +3,7 @@
 package leetcode.arrays;
 
 import java.util.Scanner;
-import java.util.Arrays;
+// import java.util.Arrays;
 public class shufflearray {
     // public int[] shuffle(int[] nums, int n) {
     //     return ans;
@@ -17,7 +17,7 @@ public class shufflearray {
         int[] nums = new int[size];
 
         System.out.print("Enter the n: ");
-        int n = sc.nextInt();
+        // int n = sc.nextInt();
 
         // Taking Inputs
         for(int i=0; i<nums.length; i++){
