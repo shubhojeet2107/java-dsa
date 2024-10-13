@@ -8,6 +8,20 @@
             "type": "java",
             "name": "algorithm",
             "request": "launch",
+            "mainClass": "search.linear_search.algorithm",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "algorithm",
+            "request": "launch",
+            "mainClass": "sorting.bubble_sort.algorithm",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "algorithm",
+            "request": "launch",
             "mainClass": "search.binary_search.algorithm",
             "projectName": "java_dsa_c6bb793d"
         },
