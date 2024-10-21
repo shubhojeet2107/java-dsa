@@ -1,6 +1,6 @@
 package strings;
 
-public class palindrome {
+public class practice {
     public static void main(String[] args){
         String str = "A man, a plan, a canal: Panama";
         System.out.println(isPalindrome(str));
