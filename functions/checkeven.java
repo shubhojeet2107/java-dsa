@@ -1,3 +1,5 @@
+package functions;
+
 // // Make a function to check if a given number n is even or not.
 
 // import java.util.Scanner;

@@ -1,3 +1,5 @@
+package functions;
+
 import java.util.Scanner;
 public class sum_of_N_natural_numbers {
     public static void main(String[] args) {

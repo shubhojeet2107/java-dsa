@@ -1,3 +1,5 @@
+package functions;
+
 import java.util.Scanner;
 
 public class sum_until_zero_fn {
