@@ -3,7 +3,7 @@ package sorting.bubble_sort;
 import java.util.Arrays;
 public class algorithm {
     public static void main(String[] args) {
-        int[] nums = {5, 4, 3, 2, 1};
+        int[] nums = {2,0,2,1,1,0};
         bubble(nums);
         System.out.print(Arrays.toString(nums));
     }

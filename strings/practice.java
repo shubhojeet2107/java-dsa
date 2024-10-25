@@ -2,28 +2,25 @@ package strings;
 
 public class practice {
     public static void main(String[] args){
-        String str = "A man, a plan, a canal: Panama";
-        System.out.println(isPalindrome(str));
+        String[] a = {"ab", "c"};
+        String[] b = {"a", "bc"};
+        System.out.println(arrayStringsAreEqual(a, b));
     }
 
-    public static boolean isPalindrome(String str) {
-        if(str.length() == 0){
+    public static boolean arrayStringsAreEqual(String[] word1, String[] word2) {
+        String str1 = " ";
+        String str2 = " ";
+
+        for(int i=0; i<word1.length; i++){
+            str1 += word1[i];
+        }
+        for(int i=0; i<word2.length; i++){
+            str2 += word2[i];
+        }
+
+        if(str1.equals(str2)){
             return true;
         }
-
-        str = str.toLowerCase();
-        str = str.replaceAll("[^a-z0-9]", "");
-
-        int start = 0;
-        int end = str.length()-1;
-        while(start < end){
-            if(str.charAt(start) != str.charAt(end)){
-                return false;
-            }else{
-                start++;
-                end--;
-            }
-        }
-        return true;
+        return false;
     }
 }

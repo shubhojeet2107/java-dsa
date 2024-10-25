@@ -1,6 +1,6 @@
 // Taking an array as an input and printing its elements.
 
-package java_arrays;
+
 
 import java.util.Scanner;
 public class printnumbers {

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class algorithm {
     public static void main(String[] args) {
-        int[] nums = {1,3,4,2,2};
+        int[] nums = {2,0,2,1,1,0};
         cycle(nums);
         System.out.print(Arrays.toString(nums));
     }

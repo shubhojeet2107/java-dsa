@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class algorithm {
     public static void main(String[] args){
-        int[] nums = {-9,-23,0,32,9};
+        int[] nums = {2, 0, 1, 2};
         selection(nums);
         System.out.print(Arrays.toString(nums));
     }
