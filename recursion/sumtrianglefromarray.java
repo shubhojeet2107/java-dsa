@@ -1,3 +1,6 @@
+// https://www.geeksforgeeks.org/sum-triangle-from-array/?ref=ml_lbp
+// Question from geekforgeeks.
+
 package recursion;
 
 import java.util.Arrays;
