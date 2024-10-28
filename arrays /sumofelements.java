@@ -1,6 +1,6 @@
 // Sum of all elements in an array.
 
-package java_arrays;
+// package java_arrays;
 
 import java.util.Scanner;
 public class sumofelements {

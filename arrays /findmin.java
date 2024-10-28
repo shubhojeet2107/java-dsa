@@ -1,6 +1,6 @@
 // Find the Minimum Element. Write a program to find the smallest element in an array.
 
-package java_arrays;
+// package java_arrays;
 
 import java.util.Scanner;
 public class findmin {

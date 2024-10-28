@@ -1,6 +1,6 @@
 // Reverse the elements of an array.
 
-package java_arrays;
+// package java_arrays;
 
 import java.util.Scanner;
 public class reverseelememts {

@@ -1,6 +1,6 @@
 // Find the Maximun Element. Write a program to find the largest element in an array.
 
-package java_arrays;
+// package java_arrays;
 
 import java.util.Scanner;
 public class findmax {

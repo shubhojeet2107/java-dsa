@@ -1,6 +1,6 @@
 // Take an array of names as input from the user and print them on the screen.
 
-package java_arrays;
+// package java_arrays;
 
 import java.util.Scanner;
 public class prob2 {

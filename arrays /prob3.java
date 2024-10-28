@@ -1,6 +1,6 @@
 // Find the maximum & minimum number in an array of integers. 
 
-package java_arrays;
+// package java_arrays;
 
 import java.util.Scanner;
 public class prob3 {
