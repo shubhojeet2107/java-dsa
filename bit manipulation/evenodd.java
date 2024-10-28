@@ -4,7 +4,7 @@ public class evenodd {
         System.out.print(isOdd(num));
     }
 
-    private static boolean isOdd(int num) {
+    static boolean isOdd(int num) {
         return (num & 1) == 1;
     }
 }
