@@ -12,7 +12,7 @@ public class algorithm {
     static void cycle(int[] nums) {
         int i = 0;
         while (i < nums.length) {
-            int correct = (nums[i]-1);
+            int correct = (nums[i]-1); //we subtract -1 only if the numbers in the array is from 1 to n. if the numbers are from 0 to n then there is no need for subtracting -1.
             if (nums[i] != nums[correct]) {
                 swap(nums, i, correct);
             } else {
