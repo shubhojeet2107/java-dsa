@@ -6,7 +6,7 @@ public class rotatearray {
 
     public int[] rotate(int[] nums, int k) {
         int end = nums.length;
-        for(int i=0; i<nums.length-k; i++){
+        for(int i=0; i<nums.length-k; ){
             return new int[] {nums[end] + nums[i]};
         }
         end--;
