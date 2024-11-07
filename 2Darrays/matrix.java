@@ -1,6 +1,6 @@
 // Taking a matrix as an input and printing its elements.
 
-package java_2Darrays;
+// package java_2Darrays;
 
 import java.util.Scanner;
 public class matrix {

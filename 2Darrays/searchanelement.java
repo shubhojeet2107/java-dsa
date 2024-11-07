@@ -1,6 +1,6 @@
 // Searching for an element x in a matrix.
 
-package java_2Darrays;
+// package java_2Darrays;
 
 import java.util.Scanner;
 

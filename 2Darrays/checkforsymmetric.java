@@ -1,6 +1,6 @@
 // Check if a 2D array is symmetric or not.
 
-package java_2Darrays;
+// package java_2Darrays;
 
 import java.util.Scanner;
 

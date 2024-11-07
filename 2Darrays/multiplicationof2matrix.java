@@ -1,6 +1,6 @@
 // Write a program to multiply two 2D arrays.
 
-package java_2Darrays;
+// package java_2Darrays;
 
 import java.util.Scanner;
 public class multiplicationof2matrix {

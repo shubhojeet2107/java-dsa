@@ -1,6 +1,6 @@
 // Write a program to transpose a 2D array.
 
-package java_2Darrays;
+// package java_2Darrays;
 
 import java.util.Scanner;
 public class transpose {
