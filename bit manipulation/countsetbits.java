@@ -1,7 +1,7 @@
 // num = 9
 // num in binary = 1001; thus ans = 2;
 
-public class setbits {
+public class countsetbits {
     public static void main(String[] args){
         int num = 9;
         int count = 0;
