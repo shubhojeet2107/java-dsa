@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SmallestDivisor",
+            "request": "launch",
+            "mainClass": "search.binary_search.SmallestDivisor",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "countsetbits",
+            "request": "launch",
+            "mainClass": "countsetbits",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "setbit",
+            "request": "launch",
+            "mainClass": "setbit",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
             "name": "getbit",
             "request": "launch",
             "mainClass": "getbit",
