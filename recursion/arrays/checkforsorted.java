@@ -1,17 +1,19 @@
+// Check if the array is sorted or not
+
 package recursion.arrays;
 
 public class checkforsorted {
-    public static void main(String[] args){
-        int[] arr = {2, 4, 6, 8, 10, 9};
-        boolean ans = helper(arr, 0);
-        System.out.println(ans);
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 5, 16, 8};
+        System.out.println(sorted(arr, 0));
     }
 
-    static boolean helper(int[] arr, int index){
-        if(index == arr.length-1){
+    static boolean sorted(int[] arr, int index) {
+        // base condition
+        if (index == arr.length - 1) {
             return true;
         }
 
-        return arr[index] < arr[index+1] && helper(arr, index+1);
+        return arr[index] < arr[index + 1] && sorted(arr, index + 1);
     }
 }
