@@ -1,6 +1,6 @@
 // Recursion to print number 1 to num and from num to 1;
 
-package recursion;
+package recursion.basics;
 
 public class problem1 {
     public static void main(String[] args){

@@ -1,6 +1,6 @@
 // recursion for Binary Search 
 
-package recursion;
+package recursion.basics;
 
 public class BS {
     public static void main(String[] args) {

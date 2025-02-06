@@ -1,4 +1,4 @@
-package recursion;
+package recursion.basics;
 
 public class factorial {
     public static void main(String[] ans){

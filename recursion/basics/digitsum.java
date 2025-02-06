@@ -1,4 +1,4 @@
-package recursion;
+package recursion.basics;
 
 public class digitsum {
     public static void main(String[] args){
