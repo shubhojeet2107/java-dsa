@@ -1,8 +1,8 @@
 // recursion for Binary Search 
 
-package recursion.basics;
+package recursion.arrays;
 
-public class BS {
+public class binarysearch {
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 4, 55, 66, 78 };
         int target = 78;

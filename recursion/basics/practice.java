@@ -3,15 +3,31 @@ package recursion.basics;
 public class practice {
     public static void main(String[] args){
         int[] arr = {2, 4, 6, 8, 10, 9};
-        boolean ans = helper(arr, 0);
-        System.out.println(ans);
+        int min = findmin(arr);
+        int max = findmax(arr);
+        System.out.println(min);
+        System.out.println(max);
     }
 
-    static boolean helper(int[] arr, int index){
-        if(index == arr.length-1){
-            return true;
-        }
+    static int findmin(int[] nums){
+        int min = Integer.MAX_VALUE;
 
-        return arr[index] < arr[index+1] && helper(arr, index+1);
+        for(int i=0; i<nums.length; i++){
+            if(nums[i] < min){
+                min = nums[i];
+            }
+        }
+        return min;
+    }
+
+    static int findmax(int[] nums){
+        int max = Integer.MIN_VALUE;
+
+        for(int i=0; i<nums.length; i++){
+            if(nums[i] > max){
+                max = nums[i];
+            }
+        }
+        return max;
     }
 }
