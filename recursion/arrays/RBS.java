@@ -2,8 +2,8 @@ package recursion.arrays;
 
 public class RBS {
     public static void main(String[] args){
-        int[] arr = {5, 6, 7, 8, 9, 1, 2, 3};
-        int ans = search(arr, 2, 0, arr.length-1);
+        int[] arr = {4,5,6,7,0,1,2};
+        int ans = search(arr, 0, 0, arr.length-1);
         System.out.print(ans);
     }
 
@@ -19,15 +19,15 @@ public class RBS {
             return mid;
         }
 
-        if(arr[start] < arr[mid]){
-            if(target < arr[mid] && target > arr[start]){
+        if(arr[start] <= arr[mid]){
+            if(target <= arr[mid] && target >= arr[start]){
                 return search(arr, target, start, mid-1);
             }else{
                 return search(arr, target, mid+1, end);
             }
         }
 
-        if(target > arr[mid] && arr[end] > target){
+        if(target >= arr[mid] && arr[end] >= target){
             return search(arr, target, mid+1, end);
         }
         return search(arr, target, start, mid-1);
