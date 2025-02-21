@@ -3,7 +3,7 @@
 // *       *
 // * * * * *
 
-package practice;
+package patterns;
 
 import java.util.Scanner;
 public class pattern4 {

@@ -1,33 +1,24 @@
 package recursion.basics;
 
+import java.util.Scanner;
 public class practice {
     public static void main(String[] args){
-        int[] arr = {2, 4, 6, 8, 10, 9};
-        int min = findmin(arr);
-        int max = findmax(arr);
-        System.out.println(min);
-        System.out.println(max);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of rows: ");
+        int num = sc.nextInt();
+        pattern(num, 1, 1);
+        sc.close();
     }
 
-    static int findmin(int[] nums){
-        int min = Integer.MAX_VALUE;
-
-        for(int i=0; i<nums.length; i++){
-            if(nums[i] < min){
-                min = nums[i];
-            }
+    public static void pattern(int n, int i, int j){
+        if(n < i){
+            return;
         }
-        return min;
-    }
-
-    static int findmax(int[] nums){
-        int max = Integer.MIN_VALUE;
-
-        for(int i=0; i<nums.length; i++){
-            if(nums[i] > max){
-                max = nums[i];
-            }
+        for(j=1; j<=i; j++){
+            System.out.print("* ");
         }
-        return max;
+        System.out.println();
+        pattern(n, i+1, j);
     }
 }
+
