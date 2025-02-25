@@ -4,7 +4,7 @@ package recursion.basics;
 public class practice {
     public static void main(String[] args){
         // Scanner sc = new Scanner(System.in);
-        int number = 14;
+        // int number = 14;
         System.out.println();
     }
 
@@ -18,9 +18,9 @@ public class practice {
         }
 
         if(num%2 == 0){
-            return ans(num/2, count++);
+            return ans(num/2, count+1);
         }else{
-            return ans(num-1, count++);
+            return ans(num-1, count+1);
         }
     }
 }
