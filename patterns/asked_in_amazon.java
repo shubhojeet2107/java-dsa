@@ -1,33 +1,26 @@
 // Print Pattern: Write a program to print the following pattern:
 
-// *
-// * *
-// * * *
-// * * * *
-// * * * * *
-// * * * *
-// * * *
-// * *
-// *
-
-
+// *    *
+// **   **
+// ***  ***
+// **** ****
+// **********
 
 package patterns;
 
-public class pattern5 {
+public class asked_in_amazon {
     public static void main(String[] args){
-        pattern(9);
+        pattern();
     }
-    static void pattern(int num){
+
+    static void pattern(){
         for(int i=1; i<=5; i++){
-            for(int j=5; j>=i; j--){
+            for(int j=1; j<=i; j++){
                 System.out.print("*");
             }
-            System.out.println();
-        }
-
-
-        for(int i=1; i<=5; i++){
+            for(int k=5; k>i; k--){
+                System.out.print(" ");
+            }
             for(int j=1; j<=i; j++){
                 System.out.print("*");
             }

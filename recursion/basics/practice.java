@@ -1,24 +1,27 @@
 package recursion.basics;
 
-import java.util.Scanner;
+// import java.util.Scanner;
 public class practice {
     public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number of rows: ");
-        int num = sc.nextInt();
-        pattern(num, 1, 1);
-        sc.close();
+        // Scanner sc = new Scanner(System.in);
+        int number = 14;
+        System.out.println();
     }
 
-    public static void pattern(int n, int i, int j){
-        if(n < i){
-            return;
+    public int numberOfSteps(int num) {
+        return ans(num, 0);
+    }
+
+    public int ans(int num, int count){
+        if(num == 0){
+            return count;
         }
-        for(j=1; j<=i; j++){
-            System.out.print("* ");
+
+        if(num%2 == 0){
+            return ans(num/2, count++);
+        }else{
+            return ans(num-1, count++);
         }
-        System.out.println();
-        pattern(n, i+1, j);
     }
 }
 

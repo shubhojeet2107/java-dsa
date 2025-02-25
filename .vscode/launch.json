@@ -6,6 +6,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "practice",
+            "request": "launch",
+            "mainClass": "sorting.selection_sort.practice",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "bubblesort",
+            "request": "launch",
+            "mainClass": "recursion.arrays.bubblesort",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "asked_in_amazon",
+            "request": "launch",
+            "mainClass": "patterns.asked_in_amazon",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "pattern6",
+            "request": "launch",
+            "mainClass": "patterns.pattern6",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "pattern5",
+            "request": "launch",
+            "mainClass": "patterns.pattern5",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "pattern4",
+            "request": "launch",
+            "mainClass": "patterns.pattern4",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "pattern2",
+            "request": "launch",
+            "mainClass": "patterns.pattern2",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
+            "name": "pattern1",
+            "request": "launch",
+            "mainClass": "patterns.pattern1",
+            "projectName": "java_dsa_c6bb793d"
+        },
+        {
+            "type": "java",
             "name": "FolderNavigationLogic",
             "request": "launch",
             "mainClass": "recursion.basics.FolderNavigationLogic",
