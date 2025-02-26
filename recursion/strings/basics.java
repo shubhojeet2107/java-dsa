@@ -2,10 +2,10 @@ package recursion.strings;
 
 public class basics {
     public static void main(String[] args){
-        String str = "abbacd";
+        String str = "abbapplecd";
         skip("", str);
         System.out.println();
-        System.out.println(skip(str));
+        System.out.println(skipString(str));
     }
 
     // function where in the empty string is also passed with the parameters.
@@ -37,4 +37,17 @@ public class basics {
             return ch + skip(str.substring(1));
         }
     } 
+
+    // function to skip a string.
+    public static String skipString(String str){
+        if(str.isEmpty()){
+            return "";
+        }
+
+        if(str.startsWith("apple")){
+            return skipString(str.substring(5));  // "APPLE" has 5 characters. 
+        }else{
+            return str.charAt(0) + skipString(str.substring(1));
+        }
+    }
 }
