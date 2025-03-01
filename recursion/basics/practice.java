@@ -1,27 +1,19 @@
 package recursion.basics;
 
+import java.util.Arrays;
+
 // import java.util.Scanner;
 public class practice {
     public static void main(String[] args){
-        // Scanner sc = new Scanner(System.in);
-        // int number = 14;
-        System.out.println();
+        int[] nums1 ={1,2,3,0,0,0};
+        int m = 3;
+        int[] nums2 = {2,5,6};
+        int n = nums2.length;
+
+        merge(nums1, m, nums2, n);
     }
 
-    public int numberOfSteps(int num) {
-        return ans(num, 0);
-    }
-
-    public int ans(int num, int count){
-        if(num == 0){
-            return count;
-        }
-
-        if(num%2 == 0){
-            return ans(num/2, count+1);
-        }else{
-            return ans(num-1, count+1);
-        }
+    public static void merge(int[] nums1, int m, int[] nums2, int n) {
     }
 }
 
