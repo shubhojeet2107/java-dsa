@@ -11,6 +11,7 @@ public class subset {
         System.out.println(subSet(arr));
     }
 
+    //Array with distinct values
     public static List<List<Integer>> subSet(int[] arr){
         List<List<Integer>> outer = new ArrayList<>();
         outer.add(new ArrayList<>());
@@ -24,4 +25,6 @@ public class subset {
         }
         return outer;
     }
+
+    // Array with duplicate values
 }
