@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Dice {
     public static void main(String[] args){
-        function("", 4);
+        function("", 3);
 
         ArrayList<String> ans = new ArrayList<>();
         ans = dice("", 4);
@@ -36,7 +36,6 @@ public class Dice {
         for(int i=1; i<=target; i++){
             ans.addAll(dice(p+i, target-i));
         }
-
         return ans;
     }
 }
