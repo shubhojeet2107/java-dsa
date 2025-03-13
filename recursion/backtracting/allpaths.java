@@ -11,7 +11,7 @@ public class allpaths {
         };
 
         int[][] path = new int[board.length][board[0].length];
-        problem2("", board, 0, 0, path, 0);
+        problem2("", board, 0, 0, path, 1);
     }
 
     public static void problem1(String p, boolean[][] maze, int row, int col) {

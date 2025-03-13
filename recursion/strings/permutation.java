@@ -21,8 +21,8 @@ public class permutation {
         char ch = str.charAt(0);
 
         for(int i=0; i<=empty.length(); i++){
-            String first = empty.substring(0, i);
-            String last = empty.substring(i, empty.length());
+            String first = empty.substring(0, i); // Extracts the characters till i.
+            String last = empty.substring(i, empty.length()); //Extracts the remaining characters after index i.
 
             arrangement(first+ch+last, str.substring(1));
         }
