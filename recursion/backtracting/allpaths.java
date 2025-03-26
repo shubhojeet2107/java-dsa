@@ -14,6 +14,7 @@ public class allpaths {
         problem2("", board, 0, 0, path, 1);
     }
 
+    //Code for backtracking.
     public static void problem1(String p, boolean[][] maze, int row, int col) {
         if (row == maze.length - 1 && col == maze[0].length - 1) {
             System.out.println(p);

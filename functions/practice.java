@@ -1,31 +1,21 @@
 package functions;
 
 public class practice {
-    
-}
+    public static void main(String[] args){
+        maze2("", 3, 3);
+    }   
 
-class Solution {
+    static void maze2(String p, int row, int col){
+        if(row == 1 && col == 1){
+            System.out.println(p);
+            return;
+        }
 
-    static int findFloor(int[] arr, int k) {
-        // write code here
-        int start = 0;
-        int end = arr.length-1;
-        
-        if(arr[start] > k){
-            return -1;
+        if(row > 1){
+            maze2(p+'D', row-1, col);
         }
-            
-        while(end >= start){
-            int mid = start + (end-start)/2;
-            
-            if(arr[mid] == k){
-                return mid;
-            }else if(arr[mid] > k){
-                end = mid-1;
-            }else{
-                start = mid+1;
-            }
+        if(col > 1){
+            maze2(p+'R', row, col-1);
         }
-        return end;
     }
 }
