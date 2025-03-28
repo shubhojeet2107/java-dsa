@@ -4,7 +4,7 @@ package recursion.backtracting;
 
 public class NQueens {
     public static void main(String[] args) {
-        System.out.println(totalNQueens(5));
+        System.out.println(totalNQueens(4));
     }
 
     public static int totalNQueens(int n) {
@@ -15,6 +15,8 @@ public class NQueens {
 
     public static int queens(boolean[][] board, int row) {
         if (row == board.length) {
+            display(board);
+            System.out.println();
             return 1;
         }
 
@@ -58,5 +60,18 @@ public class NQueens {
 
         //if none are false return true
         return true;
+    }
+
+    static void display(boolean[][] board){
+        for(boolean[] row : board){
+            for(boolean element : row){
+                if(element){
+                    System.out.print("Q ");
+                }else{
+                    System.out.print("X ");
+                }
+            }
+            System.out.println();
+        }
     }
 }
