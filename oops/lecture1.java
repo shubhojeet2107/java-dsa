@@ -2,7 +2,7 @@
 
 package oops;
 
-import java.util.Arrays;
+// import java.util.Arrays;
 
 public class lecture1 {
     public static void main(String[] args){
