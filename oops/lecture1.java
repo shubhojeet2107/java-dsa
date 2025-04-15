@@ -9,9 +9,9 @@ public class lecture1 {
 
         //classes are declared by starting off with capital letters whereas, primitives and objects are not.
 
-        int[] marks = new int[5]; //This is a primitive, storing objects in their reference variables. 
-        Integer[] age = new Integer[5]; //This is a wrapper class, storing objects in their reference variables.
-        String[] names = new String[5]; //This is class, storing objects in their reference variables.
+        // int[] marks = new int[5]; //This is a primitive, storing objects in their reference variables. 
+        // Integer[] age = new Integer[5]; //This is a wrapper class, storing objects in their reference variables.
+        // String[] names = new String[5]; //This is class, storing objects in their reference variables.
 
         //we are creating object of our own class name Student and trying to print out the properties assigned to that class.
         Student kunal = new Student(); //kunal here is reference variable.
