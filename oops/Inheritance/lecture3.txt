@@ -1,0 +1,3 @@
+Rule:
+    The reference type (on the left-hand side) decides what you can access at compile time.
+    The object type (on the right-hand side) decides what gets executed at runtime (in case of overridden methods). 
