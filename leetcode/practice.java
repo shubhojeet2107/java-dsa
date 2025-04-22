@@ -2,37 +2,45 @@ package leetcode;
 
 public class practice {
     public static void main(String[] args){
-
+        int[] nums = {7,2,5,10,8};
+        System.out.println(splitArray(nums, 2));
     }
 
-    public int splitArray(int[] nums, int k) {
-        int start = Integer.MIN_VALUE;
+    public static int splitArray(int[] nums, int k){
+        int max = 0;
+        int start = 0;
         int end = 0;
-        for(int i=0; i<=nums.length; i++){
+
+        for(int i=0; i<nums.length; i++){
+            if(max < nums[i]){
+                max = nums[i];
+            }
             end += nums[i];
-            start = Math.max(start, nums[i]);
         }
+        start = max;
 
         while(start < end){
-            int mid = start+(end - start)/2;
-            int sum = 0;
+            int mid = start+(end-start)/2;
+
             int count = 1;
+            int sum = 0;
 
             for(int i=0; i<nums.length; i++){
-                if(sum+nums[i] > mid){
-                    count += 1;
-                    sum = nums[i];
+                if(mid >= sum+nums[i]){
+                    sum = sum+nums[i];
                 }else{
-                    sum += nums[i];
+                    sum = nums[i];
+                    count++;
                 }
             }
 
-            if(count <= k){ // mid is a potential answer
+            if(count <= k){
                 end = mid;
             }else{
                 start = mid+1;
             }
         }
-        return start;
+
+        return end;
     }
 }
