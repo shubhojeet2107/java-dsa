@@ -8,11 +8,11 @@ import java.util.List;
 
 public class subset {
     public static void main(String[] args){
-        // int[] arr = {1,2,3};
-        // System.out.println(subSet(arr));
+        int[] arr = {1,2,3};
+        System.out.println(subSet(arr));
 
-        int[] arr = {1,2,2};
-        System.out.println(subsetsWithDup(arr));
+        // int[] arr = {1,2,2};
+        // System.out.println(subsetsWithDup(arr));
     }
 
     //Array with distinct values
