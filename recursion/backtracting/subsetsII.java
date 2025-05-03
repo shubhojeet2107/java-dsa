@@ -13,6 +13,26 @@ public class subsetsII {
 
     public static List<List<Integer>> subsetsWithDup(int[] nums) {
     List<List<Integer>> result = new ArrayList<>();
+
+
+    /*
+     Level 1, index 0
+                    []
+                  /    \
+                [1]     []
+
+    Level 2, index 1
+            /     \        \
+         [1,2]   [1]       [2]  <- skip second 2 if already chosen
+        /    \               \
+    [1,2,2]  [1,2]           [2,2]
+
+    Level 3, index 2 (end)
+    [1,2,2] [1,2]   [1]   [2,2] [2]  []
+
+     */
+
+     
     Arrays.sort(nums); 
     backtrack(0, nums, new ArrayList<>(), result);
     return result;
