@@ -11,7 +11,7 @@ public class permutation {
     }
 
     /*
-                              []
+                          []
                _________/ | \_________
               /           |           \
             [a]          [b]          [c]
