@@ -1,6 +1,6 @@
 // This contains implementations of various maze-related problems
 
-package recursion.backtracting;
+package recursion.backtracking;
 
 public class maze {
     public static void main(String[] args){

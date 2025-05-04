@@ -1,4 +1,4 @@
-package recursion.backtracting;
+package recursion.backtracking;
 
 import java.util.Arrays;
 

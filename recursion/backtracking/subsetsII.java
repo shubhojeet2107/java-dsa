@@ -1,4 +1,4 @@
-package recursion.backtracting;
+package recursion.backtracking;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,7 +32,7 @@ public class subsetsII {
 
      */
 
-     
+
     Arrays.sort(nums); 
     backtrack(0, nums, new ArrayList<>(), result);
     return result;

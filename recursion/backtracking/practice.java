@@ -1,4 +1,4 @@
-package recursion.backtracting;
+package recursion.backtracking;
 
 public class practice {
     public static void main(String[] args){

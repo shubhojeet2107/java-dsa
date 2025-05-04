@@ -1,4 +1,4 @@
-package recursion.backtracting;
+package recursion.backtracking;
 
 public class Nknights {
     public static void main(String[] args){

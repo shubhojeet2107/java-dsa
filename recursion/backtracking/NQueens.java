@@ -1,6 +1,6 @@
 // Leetcode 52 N-QueensII
 
-package recursion.backtracting;
+package recursion.backtracking;
 
 public class NQueens {
     public static void main(String[] args) {
