@@ -17,7 +17,7 @@ Permutation Tree for input: [1, 1, 2]
 Start (sorted input): [1, 1, 2]
 
                    []
-           ________/|________
+           ________/\________
           /       / \        \
         [1]     [1] X       [2]
        /   \      (skip)    /   \
