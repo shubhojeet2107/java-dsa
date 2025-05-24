@@ -8,7 +8,7 @@ public class aggressivecows {
     }
     public static int aggressiveCows(int[] stalls, int k) {
         Arrays.sort(stalls);
-        int start = stalls[0];
+        int start = 1;
         int end = stalls[stalls.length-1] - stalls[0];
 
         while(start <= end){
