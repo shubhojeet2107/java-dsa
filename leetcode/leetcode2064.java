@@ -36,11 +36,7 @@ public class leetcode2064 {
             store += (quantities[i] + allocation -1) / allocation;
         }
 
-        if(store <= n){
-            return true;
-        }else{
-            return false;
-        }
+        return store <= n;
     }
 }
 
