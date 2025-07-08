@@ -24,7 +24,7 @@ public class Box {
         this.w = w;
     }
 
-     Box(Box old) {
+    Box(Box old) {
         this.h = old.h;
         this.l = old.l;
         this.w = old.w;
