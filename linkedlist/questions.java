@@ -1,0 +1,168 @@
+package linkedlist;
+
+public class questions {
+
+    private Node head;
+    private Node tail;
+    private Node next;
+    private int size;
+
+    public questions(){
+        this.size = 0;
+    }
+    
+    public class Node{
+        private int value;
+        private Node next;
+
+        private Node(int value){
+            this.value = value;
+        }
+
+        private Node(int val, Node next){
+            this.value = val;
+            this.next = next;
+        }
+    }
+
+    public void display(){
+        Node temp = head;
+
+        while (temp != null){
+            System.out.print(temp.value + " -> ");
+            temp = temp.next;
+        }
+        System.out.println("END");
+    }
+
+    // Q1) Insertion of an element in a singly linked list with recursion.
+    public void insertRec(int value, int index){
+        head = insertRec(value, index, head);
+    }
+
+    private Node insertRec(int value, int index, Node node){
+        if(index == 0){
+            Node temp = new Node(value, node);
+            size++;
+            return temp;
+        }
+
+        node.next = insertRec(value, index-1, node.next);
+        return node;
+    }
+
+    // Q2) Leetcode 83. Remove Duplicates from Sorted List
+    public Node deleteDuplicates(Node head) {
+        if(head == null){
+            return head;
+        }
+
+        Node temp = head;
+        while(temp.next != null){
+            if(temp.value == temp.next.value){
+                temp.next = temp.next.next;
+            }else{
+                temp = temp.next;
+            }
+        }
+        return head;
+    }
+
+    // Q3) Leetcode 21. Merge Two Sorted Lists
+    public Node mergeTwoLists(Node list1, Node list2){
+        Node dummy = new Node(-1);
+        Node current = dummy;
+
+        while(list1 != null && list2 != null){
+            if(list1.value < list2.value){
+                current.next = list1;
+                list1 = list1.next;
+            }else{
+                current.next = list2;
+                list2 = list2.next;
+            }
+            current = current.next;
+        }
+
+        if(list1 != null){
+            current.next = list1;
+        }else{
+            current.next = list2;
+        }
+        return dummy.next;
+    }
+
+    // Q4) Leetcode 141. Linked list Cycle
+    public boolean hasCycle(Node head) {
+        Node slow = head;
+        Node fast = head;
+
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if(slow == fast){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Q5) Follow-up for above: find the length of the cycle.
+    public int LengthOfCycle(Node head) {
+        Node slow = head;
+        Node fast = head;
+
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if(slow == fast){
+                Node temp = slow;
+                int length = 0;
+
+                do { 
+                    temp = temp.next;
+                    length++;
+                } while (temp != slow);
+
+                return length;
+            }
+        }
+        return 0;
+    }
+
+    // Q6) Leetcode 142. Linked list Cycle II
+    public Node detectCycle(Node head) {
+        Node fast = head;
+        Node slow = head;
+        int length = 0;
+
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+
+            if(slow == fast);
+            length = LengthOfCycle(slow);
+            break;
+        }
+
+        if(length == 0){
+            return null;
+        }
+
+        Node p1 = head;
+        Node p2 = head;
+
+        while(length > 0){
+            slow = slow.next;
+            length--;
+        }
+
+        while(p1 != p2){
+            fast = fast.next;
+            slow = slow.next;
+        }
+        return fast;
+    }
+}

@@ -62,6 +62,23 @@ public class LL {
     }
 
 
+    // Inserting a node at any index of the list with recursion.
+    public void insertRec(int value, int index){
+        head = insertRec(value, index, head);
+    }
+
+    private Node insertRec(int value, int index, Node node){
+        if(index == 0){
+            Node temp = new Node(value, node); // creating a new node.
+            size ++; 
+            return temp; // returning the node created in the base case.
+        }
+
+        node.next = insertRec(value, index-1, node.next); // storing the value of each node in itself in each recursion call.
+        return node;
+    }
+
+
     // Deleting the first node from the list.
     public int deleteFirst(){
         int value = head.value; 
@@ -90,7 +107,7 @@ public class LL {
         return value;
     }
 
-    public Node get(int index){ // this fun() will help us reach the index value.
+    private Node get(int index){ // this fun() will help us reach the index value.
         Node node = head;
         for(int i=1; i<index; i++){
             node = node.next;

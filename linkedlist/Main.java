@@ -2,7 +2,7 @@ package linkedlist;
 
 public class Main {
     public static void main(String[] args){
-        DLL list = new DLL();
+        LL list = new LL();
         
         list.insertFirst(13);
         list.insertFirst(23);
@@ -13,7 +13,9 @@ public class Main {
 
         // list.insertLast(95);
 
-        list.insert(34, 21);
+        // list.insert(34, 21);
+
+        list.insertRec(12, 3);
 
         list.display();
     }
