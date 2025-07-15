@@ -165,4 +165,97 @@ public class questions {
         }
         return fast;
     }
+
+    // Q7) Leetcode 202. Happy Numbers
+    public boolean isHappy(int n) {
+        int slow = n;
+        int fast = n;
+
+        do { 
+            slow = square(slow);
+            fast = square(square(fast)); 
+        } while (slow != fast);
+
+        if (slow == 1){
+            return true;
+        }
+        return false;
+    }
+
+    private int square(int number){
+        int ans = 0;
+        while(number > 0){
+            int rem = number%10;
+            ans += rem*rem;
+            number = number/10;
+        }
+        return ans;
+    }
+
+    // Q8) Leetcode 876. Middle of the linked list
+    public Node middleNode(Node head){
+        Node slow = head;
+        Node fast = head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow;
+    }
+
+    // Q9) Leetcode 148. Sort Linked List
+    public void bubbleSort(){
+        sortList(0, size-1);
+    }
+
+    private Node get(int index){ // this fun() will help us reach the index value.
+        Node node = head;
+        for(int i=1; i<index; i++){
+            node = node.next;
+        }
+
+        return node;
+    }
+
+    private void sortList(int start, int end){
+        if(end == 0){
+            return;
+        }
+
+        if(end > start){
+            Node first = get(start);
+            Node second = get(start+1);
+
+            if(first.value > second.value){
+                // swap
+
+                // case 1: first = head
+                if(first == head){
+                    head = second;
+                    first.next = second.next;
+                    second.next = first;
+                }
+                // case 2: second = tail
+                else if (second == tail) {
+                    Node prev = get(start - 1);
+                    prev.next = second;
+                    second.next = first;
+                    first.next = null;
+                    tail = first;
+                }
+                // case 3: anywhere in the middle
+                else{
+                    Node prev = get(start - 1);
+                    prev.next = second;
+                    first.next = second.next;
+                    second.next = first;
+                }
+            }
+            sortList(start+1, end);
+        }else{
+            sortList(start, end-1);
+        }
+    }
 }
