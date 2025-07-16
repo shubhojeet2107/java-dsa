@@ -1,5 +1,7 @@
 package linkedlist;
 
+// import java.lang.classfile.components.ClassPrinter.ListNode;
+
 public class questions {
 
     private Node head;
@@ -206,16 +208,44 @@ public class questions {
     }
 
     // Q9) Leetcode 148. Sort Linked List
-    public void bubbleSort(){
+
+    // Using bubble sort technique recursively
+    public Node sortList(Node head) {
+        if(head == null || head.next == null){
+            return head;
+        }
+        this.head = head;
+        this.tail = getTail(head);
+        int size = getSize(head);
         sortList(0, size-1);
+
+        return this.head;
+    }
+
+    private int getSize(Node head) { // this fun() will help to know the size of the list.
+        int count = 0;
+        while (head != null) {
+            count++;
+            head = head.next;
+        }
+        return count;
+    }
+
+    private Node getTail(Node node) { // this fun() will help us reach the tail of the list.
+        if (node == null){
+            return null;
+        }
+        while (node.next != null) {
+            node = node.next;
+        }
+        return node;
     }
 
     private Node get(int index){ // this fun() will help us reach the index value.
-        Node node = head;
-        for(int i=1; i<index; i++){
+        Node node = head; 
+        for(int i=0; i<index; i++){
             node = node.next;
         }
-
         return node;
     }
 
@@ -224,7 +254,7 @@ public class questions {
             return;
         }
 
-        if(end > start){
+        if(start < end){
             Node first = get(start);
             Node second = get(start+1);
 
@@ -255,7 +285,41 @@ public class questions {
             }
             sortList(start+1, end);
         }else{
-            sortList(start, end-1);
+            sortList(0, end-1);
         }
+    }
+
+    // Q10) Reverse the Linked List (recursively)
+    public void reverse(Node node){
+        if(node == tail){
+            head = tail;
+            return;
+        }
+
+        reverse(node.next);
+        node.next = tail;
+        tail = node;
+        tail.next = null;
+    }
+
+    // Q11) in-place reversal of linked list (iterative)
+    public Node reverseList(Node head) {
+        if(head == null){
+            return head;
+        }
+
+        Node pres = head;
+        Node prev = null;
+        Node next = pres.next;
+
+        while(pres != null){
+            pres.next = prev;
+            prev = pres;
+            pres = next;
+            if(next != null){
+                next = next.next;
+            }
+        }
+        return prev;
     }
 }
