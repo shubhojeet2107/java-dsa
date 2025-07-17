@@ -322,4 +322,43 @@ public class questions {
         }
         return prev;
     }
+
+    // Q12) reverse a linked list II
+    public Node reverseBetween(Node head, int left, int right) {
+        if(left == right){
+            return head;
+        }
+
+        // skip the n-1 nodes
+        Node current = head;
+        Node prev = null;
+
+        for(int i=0; current != null && i<left-1; i++){
+            prev = current;
+            current = current.next;
+        }
+
+        Node last = prev;
+        Node newEnd = current;
+         
+        // Reverse the list
+        Node next = current.next;
+        for(int i=0; current != null && i<(right-left)+1; i++){
+            current.next = prev;
+            prev = current;
+            current = next;
+            if(next != null){
+                next = next.next;
+            }
+        }
+
+        if(last != null){
+            last.next = prev;
+        }else{
+            head = prev;
+        }
+
+        newEnd.next = current;
+        return head;
+    }
 }
