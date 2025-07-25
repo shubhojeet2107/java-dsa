@@ -1,7 +1,5 @@
 package linkedlist;
 
-// import java.lang.classfile.components.ClassPrinter.ListNode;
-
 public class questions {
 
     private Node head;
@@ -340,9 +338,9 @@ public class questions {
 
         Node last = prev;
         Node newEnd = current;
+        Node next = current.next;
          
         // Reverse the list
-        Node next = current.next;
         for(int i=0; current != null && i<(right-left)+1; i++){
             current.next = prev;
             prev = current;
@@ -360,5 +358,58 @@ public class questions {
 
         newEnd.next = current;
         return head;
+    }
+
+    // Q13) Palindrome Linked List
+    public boolean isPalindrome(Node head) {
+        Node mid = middle(head);
+        Node secondhead = inplace_reverse(mid);
+        Node rereverse = secondhead;
+
+        while(head != null && secondhead != null){
+            if(head.value != secondhead.value){
+                break;
+            }
+            head = head.next;
+            secondhead = secondhead.next;
+        }
+
+        reverse(rereverse);
+        
+        if(head == null || secondhead == null){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public Node middle(Node head){
+        Node slow = head;
+        Node fast = head;
+
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    public Node inplace_reverse(Node head){
+        if(head == null){
+            return head;
+        }
+        
+        Node current = head;
+        Node prev = null;
+        Node next = current.next;
+        while(current != null){
+            current.next = prev;
+            prev = current;
+            current = next;
+            if(next != null){
+                next = next.next;
+            }
+        }
+        return prev;
     }
 }
