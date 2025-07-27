@@ -287,7 +287,7 @@ public class questions {
         }
     }
 
-    // Q10) Reverse the Linked List (recursively)
+    // Q10) Leetcode 206. Reverse the Linked List (recursively)
     public void reverse(Node node){
         if(node == tail){
             head = tail;
@@ -295,12 +295,12 @@ public class questions {
         }
 
         reverse(node.next);
-        node.next = tail;
+        tail.next = node;
         tail = node;
         tail.next = null;
     }
 
-    // Q11) in-place reversal of linked list (iterative)
+    // Q11) Leetcode 206. in-place reversal of linked list (iterative)
     public Node reverseList(Node head) {
         if(head == null){
             return head;
