@@ -208,7 +208,7 @@ public class questions {
     // Q9) Leetcode 148. Sort Linked List
 
     // Using bubble sort technique recursively
-    public Node sortList(Node head) {
+    public Node bubblesort(Node head) {
         if(head == null || head.next == null){
             return head;
         }
@@ -285,6 +285,58 @@ public class questions {
         }else{
             sortList(0, end-1);
         }
+    }
+
+    // Using Merge Sort.
+    public Node sortList(Node head){
+        if(head == null || head.next == null){
+            return head;
+        }
+
+        Node mid = getMid(head);
+        Node left = sortList(head);
+        Node right = sortList(mid);
+
+        return merge(left, right);
+    }
+
+    private Node merge(Node left, Node right) {
+        Node dummyhead = new Node(-1);
+        Node current = dummyhead;
+
+        while(left != null && right != null){
+            if(left.value < right.value){
+                current.next = left;
+                left = left.next;
+            }else{
+                current.next = right;
+                right = right.next;
+            }
+            current = current.next;
+        }
+
+        if(left != null){
+            current.next = left;
+        }else{
+            current.next = right;
+        }
+
+        return dummyhead.next;
+    }
+
+    private Node getMid(Node head){
+        Node midprev = null;
+        while(head != null && head.next != null){
+            if(midprev == null){
+                midprev = head;
+            }else{
+                midprev = midprev.next;
+            }
+            head = head.next.next;
+        }
+        Node mid = midprev.next;
+        midprev.next = null;
+        return mid;
     }
 
     // Q10) Leetcode 206. Reverse the Linked List (recursively)
