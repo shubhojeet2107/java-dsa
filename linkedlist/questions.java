@@ -464,4 +464,59 @@ public class questions {
         }
         return prev;
     }
+
+    // Q14) Reorder List.
+    public void reorderList(Node head) {
+        Node mid = getMid(head);
+        Node reverse = inplace_reverse(mid);
+
+        Node h1 = head;
+        Node h2 = reverse;
+
+        while(h1 != null && h2 != null){
+            Node temp = h1.next;
+            h1.next = h2;
+            h1 = temp;
+
+            temp = h2.next;
+            h2.next = h1;
+            h2 = temp;
+        }
+
+        if(h1 != null){
+            h1.next = null;
+        }
+    }
+
+    // Q17) Rotate List.
+    public Node rotateRight(Node head, int k) {
+        if (k <= 0 || head == null || head.next == null) {
+            return head;
+        }
+
+        int length = getSize(head);
+        int rotations = k % length;
+
+        if (rotations == 0) return head;
+
+        int skip = length-rotations-1;
+
+        Node lastPrev = head;
+        while(skip > 0){
+            lastPrev = lastPrev.next;
+            skip--;
+        }
+
+        Node newHead = lastPrev.next;
+        lastPrev.next = null;
+
+        Node tail = newHead;
+        while(tail.next != null){
+            tail = tail.next;
+        }
+
+        tail.next = head;
+
+        return newHead;
+    }
 }
