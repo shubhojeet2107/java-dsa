@@ -83,4 +83,46 @@ public class ImplementBT {
         }
         prettyDisplay(node.left, level + 1);
     }
+
+
+    // pre_order
+    public void preOrder(){
+        preOrder(root);
+    }
+    public void preOrder(Node node){
+        if(node == null){
+            return;
+        }
+
+        System.out.print(node.value + " ");
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+
+    // in_order
+    public void inOrder(){
+        inOrder(root);
+    }
+    public void inOrder(Node node){
+        if(node == null){
+            return;
+        }
+
+        inOrder(node.left);
+        System.out.print(node.value + " ");
+        inOrder(node.right);
+    }
+
+    // post_order
+    public void postOrder(){
+        postOrder(root);
+    }
+    public void postOrder(Node node){
+        if(node == null){
+            return;
+        }
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.print(node.value + " ");
+    }
 }
