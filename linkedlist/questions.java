@@ -426,7 +426,7 @@ public class questions {
             secondhead = secondhead.next;
         }
 
-        reverse(rereverse);
+        inplace_reverse(rereverse);
         
         if(head == null || secondhead == null){
             return true;
