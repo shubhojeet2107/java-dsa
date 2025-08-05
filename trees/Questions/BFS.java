@@ -20,6 +20,26 @@ public class BFS {
       }
     }
 
+    class Node {
+        public int val;
+        public Node left;
+        public Node right;
+        public Node next;
+
+        public Node() {}
+
+        public Node(int _val) {
+            val = _val;
+        }
+
+        public Node(int _val, Node _left, Node _right, Node _next) {
+            val = _val;
+            left = _left;
+            right = _right;
+            next = _next;
+        }
+    };
+
     // BFS. Q1) Binary Tree level order traversal.
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>(); // List of List (the outer list)
@@ -130,5 +150,86 @@ public class BFS {
             }
         }
         return queue.peek();
+    }
+
+    // Q5) Zigzag level order traversal.
+
+    // Q6) Populating Next Right Pointers in Each Node
+    public Node connect(Node root) {
+        if(root == null){
+            return root;
+        }
+
+        Node leftMost = root;
+
+        while(leftMost.left != null){
+            Node current = leftMost;
+            while(current != null){
+                current.left.next = current.right;
+                if(current.next != null){
+                    current.right.next = current.next.left;
+                }
+                current = current.next;
+            }
+            leftMost = leftMost.left;
+        }
+        return root;
+    }
+
+    // Q7) Binary Tree Right Side View
+    public List<Integer> rightSideView(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+
+        if(root == null){
+            return result;
+        }
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+
+        while(!queue.isEmpty()){
+            int levelSize = queue.size();
+            for(int i=0; i<levelSize; i++){
+                TreeNode currentNode = queue.poll();
+                if(i == levelSize-1){
+                    result.add(currentNode.val);
+                }
+                if(currentNode.left != null){
+                    queue.offer(currentNode.left);
+                }
+                if(currentNode.right != null){
+                    queue.offer(currentNode.right);
+                }
+            }
+        }
+        return result;
+    }
+
+    // Q9) Symmetric Tree
+    public boolean isSymmetric(TreeNode root) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root.left);
+        queue.offer(root.right);
+
+        while(!queue.isEmpty()){
+            TreeNode left = queue.poll();
+            TreeNode right = queue.poll();
+
+            if(left == null && right == null){
+                continue;
+            }
+            if(left == null || right == null){
+                return false;
+            }
+            if(left.val != right.val){
+                return false;
+            }
+
+            queue.offer(left.left);
+            queue.offer(right.right);
+            queue.offer(left.right);
+            queue.offer(right.left);
+        }
+        return true;
     }
 }
