@@ -106,6 +106,84 @@ public class DFS {
 
     // Q5) Flatten Binary Tree to Linked List
     public void flatten(TreeNode root) {
+        TreeNode current = root;
+        while(current != null){
+            if(current.left != null){
+                TreeNode temp = current.left;
+                while(temp.right != null){
+                    temp = temp.right;
+                }
 
+                temp.right = current.right;
+                current.right = current.left;
+                current.left = null;
+            }
+            current = current.right;
+        }
+    }
+
+    // Q6) Validate Binary Search Tree
+    public boolean isValidBST(TreeNode root) {
+        return helper(root, null, null);
+    }
+
+    private boolean helper(TreeNode node, Integer low, Integer high){
+        if(node == null){
+            return true;
+        }
+
+        if(low != null && node.val <= low){
+            return false;
+        }
+        if(high != null && node.val >= high){
+            return false;
+        }
+
+        boolean left = helper(node.left, low, node.val);
+        boolean right = helper(node.right, node.val, high);
+
+        return left && right;
+    }
+
+    // Q7) Lowest common ancestor of a binary tree
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if(root == null){
+            return null;
+        }
+
+        if(root == p || root == q){
+            return root;
+        }
+
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
+
+        if(left != null && right != null){
+            return root;
+        }
+
+        return (left == null ? right : left);
+    }
+
+    // Q8) Kth Smallest element in BST
+    int count = 0;
+    int result = -1;
+    public int kthSmallest(TreeNode root, int k) {
+        inorder(root, k);
+        return result;
+    }
+
+    public void inorder(TreeNode root, int k){
+        if(root == null || result != -1){
+            return;
+        }
+
+        int left = kthSmallest(root.left, k);
+        count += 1;
+        if(count == k){
+            result = root.val;
+            return;
+        }
+        int right = kthSmallest(root.right, k);
     }
 }
