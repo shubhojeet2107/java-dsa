@@ -142,9 +142,10 @@ public class questions {
             fast = fast.next.next;
             slow = slow.next;
 
-            if(slow == fast);
-            length = LengthOfCycle(slow);
-            break;
+            if(slow == fast) {
+                length = LengthOfCycle(slow);
+                break;
+            }
         }
 
         if(length == 0){
@@ -155,15 +156,15 @@ public class questions {
         Node p2 = head;
 
         while(length > 0){
-            slow = slow.next;
+            p2 = p2.next;
             length--;
         }
 
         while(p1 != p2){
-            fast = fast.next;
-            slow = slow.next;
+            p1 = p1.next;
+            p2 = p2.next;
         }
-        return fast;
+        return p1;
     }
 
     // Q7) Leetcode 202. Happy Numbers
@@ -339,7 +340,7 @@ public class questions {
         return mid;
     }
 
-    // Q10) Leetcode 206. Reverse the Linked List (recursively)
+    // Q10) Leetcode 206. Reverse the Linked List (recursively)h
     public void reverse(Node node){
         if(node == tail){
             head = tail;
@@ -487,6 +488,53 @@ public class questions {
             h1.next = null;
         }
     }
+
+    // Q15) Reverse Nodes in k-Group.
+    public Node reverseKGroup(Node head, int k){
+        if(k <= 1 || head == null){
+            return head;
+        }
+
+        Node prev = null;
+        Node curr = head;
+        Node last = null;
+
+        while(true){
+            Node check = head;
+            int count = 0;
+
+            while(count < k && check != null){
+                check = check.next;
+                count++;
+            }
+            if(count < k){
+                break;
+            }
+
+            Node next = curr.next;
+            Node newHead = curr;
+            for(int i=0; curr != null && i<k; i++){
+                curr.next = null;
+                prev = curr;
+                curr = next;
+                if(next != null){
+                    next = next.next;
+                }
+            }
+
+            if(last != null){
+                last.next = prev;
+            }else{
+                head = prev;
+            }
+
+            newHead.next = curr;
+            last = newHead;
+        }
+        return head;
+    }
+
+    // Q16) Reverse alternate K nodes
 
     // Q17) Rotate List.
     public Node rotateRight(Node head, int k) {
