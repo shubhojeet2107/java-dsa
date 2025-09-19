@@ -1,7 +1,7 @@
 // https://www.geeksforgeeks.org/sum-triangle-from-array/?ref=ml_lbp
 // Question from geekforgeeks.
 
-package recursion.questions;
+package recursion.questions.easy;
 
 import java.util.Arrays;
 
