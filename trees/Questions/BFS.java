@@ -193,6 +193,8 @@ public class BFS {
     }
 
     // Q6) Populating Next Right Pointers in Each Node
+    // Without using a queue
+    // It is optimised O(1)
     public Node connect(Node root) {
         if(root == null){
             return root;

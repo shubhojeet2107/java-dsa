@@ -340,7 +340,7 @@ public class questions {
         return mid;
     }
 
-    // Q10) Leetcode 206. Reverse the Linked List (recursively)h
+    // Q10) Leetcode 206. Reverse the Linked List (recursively)
     public void reverse(Node node){
         if(node == tail){
             head = tail;

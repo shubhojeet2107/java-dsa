@@ -180,13 +180,13 @@ public class DFS {
             return;
         }
 
-        int left = kthSmallest(root.left, k);
+        inorder(root.left, k);
         count += 1;
         if(count == k){
             result = root.val;
             return;
         }
-        int right = kthSmallest(root.right, k);
+        inorder(root.right, k);
     }
 
     // Q9) Construct Binary Tree from Preorder and Inorder Traversal
