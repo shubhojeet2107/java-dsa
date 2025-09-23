@@ -1,9 +1,6 @@
 package trees.Questions;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class BFS {
 
@@ -153,6 +150,47 @@ public class BFS {
     }
 
     // Q5) Zigzag level order traversal.
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
+
+        if(root == null){
+            return result;
+        }
+
+        Deque<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+
+        boolean reverse = false;
+
+        while(!queue.isEmpty()){
+            int levelsize = queue.size();
+            List<Integer> internal = new ArrayList<>(levelsize);
+            for(int i=0; i<levelsize; i++){
+                if(!reverse){
+                    TreeNode currentNode = queue.pollFirst();
+                    internal.add(currentNode.val);
+                    if(currentNode.left != null){
+                        queue.addLast(currentNode.left);
+                    }
+                    if(currentNode.right != null){
+                        queue.addLast(currentNode.right);
+                    }
+                }else{
+                    TreeNode currentNode = queue.pollLast();
+                    internal.add(currentNode.val);
+                    if(currentNode.right != null){
+                        queue.addFirst(currentNode.right);
+                    }
+                    if(currentNode.left != null){
+                        queue.addFirst(currentNode.left);
+                    }
+                }
+            }
+            reverse = !reverse;
+            result.add(internal);
+        }
+        return result;
+    }
 
     // Q6) Populating Next Right Pointers in Each Node
     public Node connect(Node root) {
